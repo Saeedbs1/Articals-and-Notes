@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+
+.content{
+    max-width: 1280px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'inter', sans-serif;
+    
+}
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-weight: 800;
+    .filter-button{
+        background-color: #43A6FF;
+        padding: 5px;
+        color: white;
+        outline: none;
+        border-radius: 5px;
+        font-family: 'inter', sans-serif;
+        font-weight: 800;
+        border: none;
+        width: 100px;
+    }
+}
+*{
+    max-width: 100%;
+}
+.todo-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    margin: 50px 0px;
+    
+}
