@@ -2,20 +2,20 @@ import { useState } from 'react';
 import { BsCheck2Circle } from 'react-icons/bs';
 import { MdCancel } from 'react-icons/md';
 
-const AddNote = ({ handleAdd,toggleAdd}) => {
+const AddArtical = ({ handleAdd,toggleAdd}) => {
   const [cancelAdd, setCancelAdd] = useState(toggleAdd);
-  const [noteTitle, setNoteTitle] = useState('');
-  const [noteBody, setNoteBody] = useState('');
+  const [articalTitle, setArticalTitle] = useState('');
+  const [articalBody, setArticalBody] = useState('');
 
-  const handleCancelAddNote = () => {
+  const handleCancelAddArtical = () => {
     setCancelAdd(!toggleAdd);
   };
 
-  const handleAddNoteClick = () => {
-    if (noteTitle.trim() !== '' && noteBody.trim() !== '') {
-      handleAdd(noteTitle, noteBody);
-      setNoteTitle('');
-      setNoteBody('');
+  const handleAddArticalClick = () => {
+    if (articalTitle.trim() !== '' && articalBody.trim() !== '') {
+      handleAdd(articalTitle, articalBody);
+      setArticalTitle('');
+      setArticalBody('');
       setCancelAdd(toggleAdd);
     }
   };
@@ -29,21 +29,21 @@ const AddNote = ({ handleAdd,toggleAdd}) => {
       <div className="add-details">
         <input
           type="text"
-          value={noteTitle}
-          onChange={(e) => setNoteTitle(e.target.value)}
+          value={articalTitle}
+          onChange={(e) => setArticalTitle(e.target.value)}
         />
         <textarea
           rows="8"
-          value={noteBody}
-          onChange={(e) => setNoteBody(e.target.value)}
+          value={articalBody}
+          onChange={(e) => setArticalBody(e.target.value)}
         />
       </div>
       <div className="add-actions">
-        <MdCancel className="cancel" onClick={handleCancelAddNote} />
-        <BsCheck2Circle className="check" onClick={handleAddNoteClick} />
+        <MdCancel className="cancel" onClick={handleCancelAddArtical} />
+        <BsCheck2Circle className="check" onClick={handleAddArticalClick} />
       </div>
     </div>
   );
 };
 
-export default AddNote;
+export default AddArtical;
